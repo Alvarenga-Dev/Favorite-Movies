@@ -4,17 +4,19 @@ import com.alvarengadev.favoritemovies.data.domain.Movie
 import com.alvarengadev.favoritemovies.data.mapper.GenreMapper
 import com.alvarengadev.favoritemovies.data.network.RetrofitInitializer
 import com.alvarengadev.favoritemovies.data.network.genre.response.GenresResult
-import com.alvarengadev.favoritemovies.presenter.interfaces.MovieGenres
+import com.alvarengadev.favoritemovies.presenter.interfaces.GenresMovie
+import com.alvarengadev.favoritemovies.utils.ConstantsUtils
+import com.alvarengadev.favoritemovies.utils.GenresConvertUtils
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-class MovieGenresPresenter(private val genresPresenter: MovieGenres.MovieGenresView, private val movie: Movie): Callback<GenresResult> {
+class GenresMoviePresenter(private val genresPresenterMovie: GenresMovie.GenresMovieView, private val movie: Movie):
+    Callback<GenresResult> {
 
-    fun genres() {
+    fun init() {
         val call = RetrofitInitializer().genresService()
-            .genre("9ed9bcdc4a30a80d2ca80101f16cf93a")
-
+            .genre(ConstantsUtils.API_KEY)
         call.enqueue(this)
     }
 
@@ -22,18 +24,21 @@ class MovieGenresPresenter(private val genresPresenter: MovieGenres.MovieGenresV
         if (response.isSuccessful) {
                 response.body()?.let {
                     val listGenre = GenreMapper.responseToDomain(it.genres)
-                    var genres = ArrayList<String>()
+                    val genres = ArrayList<String>()
+                    val movieGenres = GenresConvertUtils.stringToListInt(movie.genres)
                     for(genre in listGenre) {
-                        if (movie.genres.contains(genre.id)) {
+                        if (movieGenres.contains(genre.id)) {
                             genres.add(genre.movieGenre)
                         }
                     }
-                    genresPresenter.setGenres(genres)
+                    genresPresenterMovie.setGenres(genres)
                 }
+        } else {
+            genresPresenterMovie.messageError()
         }
     }
 
     override fun onFailure(call: Call<GenresResult>, t: Throwable) {
-
+        genresPresenterMovie.messageError()
     }
 }

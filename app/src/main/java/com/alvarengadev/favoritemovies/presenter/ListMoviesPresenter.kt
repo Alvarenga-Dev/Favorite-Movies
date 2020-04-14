@@ -11,7 +11,7 @@ import retrofit2.Response
 class ListMoviesPresenter(private var view: ListMovies.ListMoviesView?):
     ListMovies.ListMoviesPresenter, Callback<MoviesResult>{
 
-    override fun getMovies() {
+    override fun init() {
         val call = RetrofitInitializer().movieService()
             .list("9ed9bcdc4a30a80d2ca80101f16cf93a")
 

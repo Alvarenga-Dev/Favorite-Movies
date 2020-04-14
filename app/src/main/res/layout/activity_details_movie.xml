@@ -4,26 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.activities.DetailsMovieActivity">
+    tools:context=".view.activities.DetailsActivityMovie">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbarDetailsMovie"
+        android:id="@+id/toolbar_details_movie"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:titleTextColor="@color/colorTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ScrollView
+        android:background="@color/colorPrimaryDark"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbarDetailsMovie">
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_details_movie">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -32,7 +34,9 @@
             <ImageView
                 android:id="@+id/iv_poster_details"
                 android:layout_width="0dp"
-                android:layout_height="250dp"
+                android:layout_height="@dimen/height_poster_details"
+                android:contentDescription="@string/poster_description_init_movie"
+                android:scaleType="centerCrop"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -40,48 +44,49 @@
                 app:srcCompat="@drawable/ic_launcher_background" />
 
             <TextView
+                style="@style/TitleDetailsMovie"
                 android:id="@+id/tv_title_movie_details"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:text="Bad Boys for Life"
-                android:textColor="@color/colorPrimary"
-                android:textSize="20sp"
-                android:textStyle="bold"
+                android:text="@string/title_init_movie"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/iv_poster_details" />
 
             <TextView
+                style="@style/InfoDetailsMovie"
                 android:id="@+id/tv_release_date_movie_details"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
-                android:text="Release date: 2020/01/15"
+                android:text="@string/date_init_movie"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_title_movie_details" />
 
             <TextView
-                android:id="@+id/tv_genres_details"
+                style="@style/InfoDetailsMovie"
+                android:id="@+id/tv_genres_movie_details"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="2dp"
                 android:layout_marginEnd="32dp"
-                android:text="Action, Adventure and Animation"
+                android:text="@string/genres_init_movie"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_release_date_movie_details" />
 
             <TextView
+                style="@style/DescriptionDetailsMovie"
                 android:id="@+id/tv_description_movie_details"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -89,13 +94,11 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="32dp"
-                android:text="lorem ipson lorem ipson lorem ipson lorem ipson lorem ipson lorem ipson lorem ipson"
-                android:textColor="@android:color/black"
-                android:textSize="16sp"
+                android:text="@string/description_init_movie"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_genres_details" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_genres_movie_details" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

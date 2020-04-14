@@ -1,7 +1,8 @@
 package com.alvarengadev.favoritemovies.presenter.interfaces
 
-interface MovieGenres {
-    interface MovieGenresView {
+interface GenresMovie {
+    interface GenresMovieView {
         fun setGenres(genres: ArrayList<String>)
+        fun messageError()
     }
 }

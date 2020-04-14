@@ -2,6 +2,7 @@ package com.alvarengadev.favoritemovies.data.mapper
 
 import com.alvarengadev.favoritemovies.data.domain.Movie
 import com.alvarengadev.favoritemovies.data.network.movies.response.MovieResponse
+import com.alvarengadev.favoritemovies.utils.GenresConvertUtils
 
 class MovieMapper {
     companion object {
@@ -9,12 +10,15 @@ class MovieMapper {
             val listMovies = ArrayList<Movie>()
 
             for (movieResponse in listMovieResponse) {
+                val genresId = GenresConvertUtils.listIntToString(movieResponse.genres)
                 val movie = Movie(
+                    movieResponse.id,
                     movieResponse.title,
                     movieResponse.poster,
+                    movieResponse.posterDetails,
                     movieResponse.description,
                     movieResponse.date,
-                    movieResponse.genres
+                    genresId
                 )
                 listMovies.add(movie)
             }

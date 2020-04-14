@@ -10,7 +10,7 @@ interface ListMovies {
     }
 
     interface ListMoviesPresenter {
-        fun getMovies()
+        fun init()
         fun destroyView()
     }
 }

@@ -8,6 +8,48 @@
         <item name="colorAccent">@color/colorAccent</item>
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
+        <item name="fontFamily">@font/montserrat_medium</item>
+    </style>
+
+    <style name="TitlesMovies" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_titles_movie</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTitle</item>
+    </style>
+
+    <style name="DatesPopularMovie" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_dates_popular_movie</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorDate</item>
+    </style>
+
+    <style name="DescriptionPopularMovie" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_description_popular_movie</item>
+        <item name="android:textColor">@color/colorDescription</item>
+        <item name="android:paddingRight">4dp</item>
+    </style>
+
+    <style name="TitleDetailsMovie" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_titles_details</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorTitle</item>
+    </style>
+
+    <style name="InfoDetailsMovie" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_informations_details</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorInformations</item>
+    </style>
+
+    <style name="DescriptionDetailsMovie" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_description_details</item>
+        <item name="android:textColor">@color/colorDescription</item>
+        <item name="android:paddingRight">4dp</item>
+    </style>
+
+    <style name="TextError" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/text_size_error</item>
+        <item name="android:textColor">@color/colorError</item>
     </style>
 
 </resources>

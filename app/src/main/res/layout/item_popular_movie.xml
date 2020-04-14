@@ -12,6 +12,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="8dp"
+        app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="10dp"
         app:cardElevation="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -25,8 +26,9 @@
 
             <ImageView
                 android:id="@+id/iv_poster_movies"
-                android:layout_width="110dp"
-                android:layout_height="160dp"
+                android:layout_width="@dimen/width_poster_popular_movie"
+                android:layout_height="@dimen/height_poster_popular_movie"
+                android:contentDescription="@string/description_init_movie"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
@@ -34,6 +36,7 @@
 
             <TextView
                 android:id="@+id/tv_title_movies"
+                style="@style/TitlesMovies"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -42,7 +45,7 @@
                 android:ellipsize="end"
                 android:gravity="center_vertical"
                 android:lines="2"
-                android:text="Title"
+                android:text="@string/title_init_movie"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toStartOf="@+id/tv_date_movies"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -51,14 +54,13 @@
 
             <TextView
                 android:id="@+id/tv_date_movies"
+                style="@style/DatesPopularMovie"
                 android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_marginEnd="16dp"
                 android:gravity="center_vertical"
                 android:lines="2"
-                android:text="10/10/2010"
-                android:textColor="#aa0000"
-                android:textSize="12dp"
+                android:text="@string/date_init_movie"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_title_movies"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_title_movies"
@@ -66,6 +68,7 @@
 
             <TextView
                 android:id="@+id/tv_description_movies"
+                style="@style/DescriptionPopularMovie"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_marginStart="16dp"
@@ -75,9 +78,7 @@
                 android:ellipsize="end"
                 android:lines="5"
                 android:maxLines="5"
-
-                android:paddingRight="4dp"
-                android:text="descrição"
+                android:text="@string/description_init_movie"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/iv_poster_movies"

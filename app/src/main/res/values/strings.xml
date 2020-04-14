@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">Favorite Movies</string>
+    <!-- Favorites Movies Activity -->
+    <string name="title_toolbar_movie_favorites">My Favorites Movies</string>
+    <string name="error_get_list_movie_favorites">You haven\'t added any movies yet :(</string>
+
+    <!-- Popular Movies Activity -->
+    <string name="title_toolbar_movies_popular">Popular Movies</string>
+    <string name="error_get_list_movie">No movies found :(</string>
+
+    <!-- Detail Movie Activity -->
+    <string name="title_init_movie">Title movie</string>
+    <string name="description_init_movie">Description Movie</string>
+    <string name="poster_description_init_movie">Poster Movie</string>
+    <string name="date_init_movie">24/12/2020</string>
+    <string name="genres_init_movie">Action and Adventure</string>
+    <string name="iv_button_favorite_description">Action favorite!</string>
+    <string name="error_get_genres">Could not find the genre of the movie :(</string>
+
+    <!-- Menus -->
+    <string name="action_favorite">Favorite movie!</string>
+    <string name="action_get_popular_movies">Populars Movies!</string>
+
 </resources>

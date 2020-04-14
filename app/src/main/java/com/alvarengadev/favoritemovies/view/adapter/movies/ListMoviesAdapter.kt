@@ -16,8 +16,7 @@ class ListMoviesAdapter(private val arrayMovies: List<Movie>) : RecyclerView.Ada
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) : ListMoviesViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_movie, parent, false)
-
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_popular_movie, parent, false)
         return ListMoviesViewHolder(view, listener, arrayMovies)
     }
 
