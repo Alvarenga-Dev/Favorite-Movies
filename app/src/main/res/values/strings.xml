@@ -16,6 +16,7 @@
     <string name="genres_init_movie">Action and Adventure</string>
     <string name="iv_button_favorite_description">Action favorite!</string>
     <string name="error_get_genres">Could not find the genre of the movie :(</string>
+    <string name="alert_added_movie">You already added this movie!</string>
 
     <!-- Menus -->
     <string name="action_favorite">Favorite movie!</string>

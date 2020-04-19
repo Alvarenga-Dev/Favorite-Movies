@@ -72,7 +72,7 @@ class DetailsActivityMovie : AppCompatActivity(), GenresMovie.GenresMovieView {
             Controller().insertMoviesFavorites(movie)
             ListFavoritesAdapter(Controller().getMoviesFavorites() as ArrayList<Movie>).notifyDataSetChanged()
         } else {
-            Toast.makeText(this@DetailsActivityMovie, "...", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this@DetailsActivityMovie, R.string.alert_added_movie, Toast.LENGTH_SHORT).show()
         }
         return true
     }
