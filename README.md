@@ -1,6 +1,6 @@
 # inChurch Recruitment Process 2020 - Android Developer
 
-O desafio foi desenvolvido em Kotlin e consistia em um aplicação de catálogo dos filmes populares, utilizando a [API](https://developers.themoviedb.org/3/getting-started/introduction) do [TheMovieDB](https://www.themoviedb.org/).
+O desafio foi desenvolvido em Kotlin e consistia em uma aplicação de catálogo dos filmes populares, utilizando a [API](https://developers.themoviedb.org/3/getting-started/introduction) do [TheMovieDB](https://www.themoviedb.org/).
 
 ## Arquitetura ✏️
 
