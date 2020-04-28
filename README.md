@@ -15,7 +15,7 @@ Decidi utilizar MVP, pois é uma arquitetura na qual estou aprendendo e porque a
 - Picasso
 - Room
 
-Utilizei Retrofit e Moshi para realizar as chamadas e Picasso para recuperar as imagens a partir de suas URLs, pois é uma das bibliotecas com amplo uso na comunidade. Já a Room é uma lib que permitindo realizar a persistência de dados com o SQLite utilizando o conceito ORM (Object-relational mapping). 
+Utilizei Retrofit e Moshi para realizar as chamadas e Picasso para recuperar as imagens a partir de suas URLs, pois é uma das bibliotecas com amplo uso na comunidade. Já a Room é uma lib que permite realizar a persistência de dados com o SQLite utilizando o conceito ORM (Object-relational mapping). 
 
 ## Bônus do desafio que quero implementar ⛏
 
