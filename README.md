@@ -30,7 +30,7 @@ Utilizei Retrofit e Moshi para realizar as chamadas e Picasso para recuperar as 
 
 💁🏻‍♂️ **Lucas Alvarenga**
 
-* Meu Portifólio: https://alvarengadev.firebaseapp.com
+* Meu Portfólio: https://alvarengadev.firebaseapp.com
 * Github: [@Alvarenga-Dev](https://github.com/Alvarenga-Dev)
 
 ## Dá uma estrelinha! ⭐️
